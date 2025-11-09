@@ -59,7 +59,7 @@ const PrivacySecurity = () => {
             Privacy & Security
           </h2>
           <p className="text-sm sm:text-base text-slate-400 font-light px-2">
-            Your privacy and security are our top priorities. We've built altoTranslate with security and privacy at its core.
+            Your privacy and security are our top priorities. We&apos;ve built altoTranslate with security and privacy at its core.
           </p>
         </div>
         

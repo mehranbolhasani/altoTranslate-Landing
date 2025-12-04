@@ -47,12 +47,7 @@ const features: Feature[] = [
     icon: <Database className="h-6 w-6" />,
     title: "Memory Optimized",
     description: "Zero memory leaks, optimized for long-running sessions.",
-  },
-  {
-    icon: <Shield className="h-6 w-6" />,
-    title: "Security First",
-    description: "Input validation, XSS protection, secure API key storage.",
-  },
+  }
 ]
 
 const Features = () => {
@@ -60,19 +55,25 @@ const Features = () => {
     <section id="features" className="py-12 sm:py-16 md:py-20 lg:py-32">
       <div className="mx-auto max-w-[1024px] px-4 sm:px-6">
         <div className="mx-auto mb-10 sm:mb-12 md:mb-16 max-w-2xl text-center">
-          <h2 className="mb-3 sm:mb-4 text-2xl font-normal tracking-tight sm:text-3xl md:text-4xl text-slate-600">
+          <h2 className="mb-3 sm:mb-4 text-2xl font-normal tracking-tight sm:text-3xl md:text-4xl text-slate-600 animate-fade-in-up">
             Features
           </h2>
-          <p className="text-sm sm:text-base text-slate-400 font-light">
+          <p className="text-sm sm:text-base text-slate-400 font-light animate-fade-in-up" data-delay="0.2">
             Everything for seamless translation.
           </p>
         </div>
         
-        <div className="grid gap-8 sm:gap-10 md:gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div 
+          className="grid gap-4 sm:gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-2"
+          data-stagger
+          data-stagger-animation="fadeInUp"
+          data-stagger-delay="0.1"
+          data-duration="0.6"
+        >
           {features.map((feature, index) => (
-            <Card key={index} className="transition-all border-none">
+            <Card key={index} className="border-none p-6" data-stagger-child>
               <CardHeader className="p-0">
-                <div className="mb-3 sm:mb-4 inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg bg-primary/5 text-primary">
+                <div className="mb-3 sm:mb-4 inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-blue-100 text-blue-500">
                   {feature.icon}
                 </div>
                 <CardTitle className="text-base sm:text-lg font-normal pb-3 sm:pb-4">{feature.title}</CardTitle>

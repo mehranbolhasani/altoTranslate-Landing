@@ -63,11 +63,16 @@ const PrivacySecurity = () => {
           </p>
         </div>
         
-        <div className="grid gap-8 sm:gap-10 md:gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-2"
+        data-stagger
+        data-stagger-animation="fadeInUp"
+        data-stagger-delay="0.1"
+        data-duration="0.6"
+        >
           {securityFeatures.map((feature, index) => (
-            <Card key={index} className="transition-all border-none">
+            <Card key={index} className="border-none p-6" data-stagger-child>
               <CardHeader className="p-0">
-                <div className="mb-3 sm:mb-4 inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg bg-amber-500/10 text-amber-500">
+                <div className="mb-3 sm:mb-4 inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-amber-500/10 text-amber-500">
                   {feature.icon}
                 </div>
                 <CardTitle className="text-base sm:text-lg font-normal pb-3 sm:pb-4">{feature.title}</CardTitle>

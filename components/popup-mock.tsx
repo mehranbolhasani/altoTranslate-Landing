@@ -297,19 +297,14 @@ const PopupMock = () => {
   }
 
   return (
-    <div className="relative w-full max-w-md mx-auto">
-      <div className="absolute h-40 sm:h-52 md:h-60 w-full bg-gradient-to-b from-background to-muted/40 top-0 z-10"></div>
+    <div className="relative w-full h-fit">
       {/* Background Text - Mimicking a webpage */}
-      <div className="relative rounded-2xl sm:rounded-3xl border border-slate-300 bg-white p-4 sm:p-6 md:p-8">
+      <div className="relative">
         {/* Simulated webpage content */}
         <div className="space-y-3 sm:space-y-4">
-          <h2 className="text-base sm:text-lg md:text-xl font-semibold text-slate-300">Universal Declaration of Human Rights</h2>
-          <div className="space-y-2 sm:space-y-3 text-gray-700 leading-relaxed text-sm sm:text-base">
-            <p className="text-slate-300">
-              The Universal Declaration of Human Rights (UDHR) is a milestone document in the history of human rights.
-            </p>
-            <p className="text-slate-400">
-            Drafted by representatives with different legal and cultural backgrounds from all regions of the world, the Declaration was proclaimed by the United Nations General Assembly in Paris on 10 December 1948 (General Assembly resolution 217 A) as a common standard of achievements for all peoples and all nations.
+          <div className="space-y-2 sm:space-y-3 text-gray-700 leading-relaxed text-sm sm:text-base animate-smooth-fade" data-delay="0.6">
+            <p className="text-slate-500">
+            Drafted by representatives with different legal and cultural backgrounds from all regions of the world.
             </p>
             <p className="relative">
               {/* Selected text with highlight */}
@@ -325,11 +320,11 @@ const PopupMock = () => {
               </span>
             </p>
 
-            <p className="text-slate-400">
-            Everyone is entitled to all the rights and freedoms set forth in this Declaration, without distinction of any kind, such as race, colour, sex, language, religion, political or other opinion, national or social origin, property, birth or other status. Furthermore, no distinction shall be made on the basis of the political, jurisdictional or international status of the country or territory to which a person belongs, whether it be independent, trust, non-self-governing or under any other limitation of sovereignty.
+            <p className="text-slate-500">
+            Everyone is entitled to all the rights and freedoms set forth in this Declaration, without distinction of any kind, such as race, colour, sex, language, religion, political or other opinion, national or social origin, property, birth or other status.
             </p>
 
-            <p className="text-slate-300">
+            <p className="text-slate-500">
             Everyone has the right to life, liberty and security of person.
             </p>
           </div>
@@ -337,13 +332,10 @@ const PopupMock = () => {
 
         {/* Popup positioned near selected text */}
         <div 
-          className="absolute right-[50%] sm:-right-12 md:right-24 top-[50%] sm:top-[48%] z-20 transform scale-100 sm:scale-90 md:scale-100 origin-top-right translate-x-1/2 sm:translate-x-0 md:translate-x-1/2"
-          style={{
-            animation: 'alto-fade-in 0.3s ease-out',
-          }}
+          className="absolute right-[50%] top-[50%] sm:top-[35%] z-20 transform scale-100 sm:scale-90 md:scale-100 origin-top-right translate-x-1/2 sm:translate-x-0 md:translate-x-1/2"
         >
-          <div className="relative w-8 h-8 sm:w-10 sm:h-10 bg-white/90 backdrop-blur-sm border border-slate-300 rounded-md flex items-center justify-center mb-2 shadow-md"><kbd className="text-slate-700 text-base sm:text-xl">⌥</kbd></div>
-          <div className="alto-translate-popup w-[320px] sm:w-[320px] md:w-[360px] lg:w-[400px] min-w-[180px] max-w-[calc(100vw-2rem)] py-[10px] px-3 sm:py-3 sm:px-[14px] md:py-4 md:px-4 text-xs sm:text-[13px] md:text-sm min-h-[360px] sm:min-h-[300px] md:min-h-[320px]" style={{
+          <div className="relative w-8 h-8 sm:w-10 sm:h-10 bg-white/90 backdrop-blur-sm border border-slate-300 rounded-md flex items-center justify-center mb-2 shadow-md animate-smooth-fade" data-delay="0.6"><kbd className="text-slate-700 text-base sm:text-xl">⌥</kbd></div>
+          <div className="alto-translate-popup w-[320px] sm:w-[320px] md:w-[360px] lg:w-[400px] min-w-[180px] max-w-[calc(100vw-2rem)] py-[10px] px-3 sm:py-3 sm:px-[14px] md:py-4 md:px-4 text-xs sm:text-[13px] md:text-sm min-h-[360px] sm:min-h-[300px] md:min-h-[320px] animate-slide-up" data-delay="0.8" style={{
             background: currentThemeData.colors.background,
             border: `1px solid ${currentThemeData.colors.border}`,
             borderRadius: '12px',
@@ -539,7 +531,7 @@ const PopupMock = () => {
           </div>
 
           {/* Theme Switcher Dots */}
-          <div className="relative flex items-center justify-center gap-4 mt-12 border border-slate-400/50 rounded-full px-3 py-2 w-fit mx-auto z-[2]">
+          <div className="relative flex items-center justify-center gap-4 mt-6 border border-slate-400 rounded-full px-3 py-2 w-fit mx-auto z-[2] bg-slate-100 animate-slide-down" data-delay="1">
             {themeKeys.map((themeKey) => (
               <button
                 key={themeKey}
@@ -570,17 +562,15 @@ const PopupMock = () => {
             ))}
           </div>
 
-          <div className="handwritten absolute hidden sm:flex items-center justify-center gap-1 w-48 -bottom-8 -left-20 rotate-6 z-[1]">
-            <span className="text-slate-300 text-3xl font-story-script flex-1 tracking-normal -rotate-6 translate-y-1">Try us!</span>
+          <div className="handwritten absolute hidden sm:flex items-center justify-center gap-1 w-48 -bottom-9 -left-18 rotate-6 z-[1] animate-fade-in" data-delay="1.2">
+            <span className="text-slate-400 text-3xl font-story-script flex-1 tracking-normal -rotate-6 translate-y-1">Try us!</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 60 67" className="flex-1 rotate-45 scale-[40%] -translate-x-10">
-              <path fill="#cbd5e1" d="M.61 65.11c-.08-.64.21-1.29.71-1.68.43-.414.83-.869 1.23-1.32q.195-.222.39-.44l.604-.658A229 229 0 0 1 4.7 59.76c1.07-1.15 2.13-2.32 3.17-3.49 1.244-1.477 2.444-2.985 3.644-4.494a215 215 0 0 1 3.536-4.366c2.275-2.724 4.617-5.406 6.949-8.077l.631-.723c2.036-2.33 4.012-4.722 5.988-7.113L29.94 29.9q3.69-4.44 7.35-8.91c1.36-1.66 2.74-3.32 4.13-4.96 1.067-1.26 2.164-2.49 3.263-3.723l.832-.935.034-.04.1-.11c.968-1.102 1.91-2.22 2.855-3.34q.61-.728 1.226-1.452c.57-.669 1.14-1.328 1.711-1.987l.029-.033c-.84.11-1.68.23-2.51.36q-.394.063-.787.129a54 54 0 0 1-2.043.311 88 88 0 0 0-3.25.47c-.83.18-1.65.36-2.48.55q-.255.059-.51.12c-.454.11-.912.222-1.37.28-.96.12-1.86-.55-1.99-1.51-.13-.95.55-1.88 1.51-2 .09-.01.18-.03.28-.04.578-.122 1.152-.253 1.726-.383C41.16 2.444 42.272 2.19 43.4 2c.488-.086.979-.146 1.472-.206h.002c.365-.044.73-.089 1.096-.144.814-.122 1.62-.253 2.432-.384l.348-.056c1.013-.158 2.028-.298 3.043-.438.85-.117 1.7-.234 2.547-.362.75-.11 1.57-.18 2.21.32.57.44.76 1.126.663 1.8q.105.15.177.33c.28.7.37 1.42.46 2.16.05.41.11.81.15 1.22.1 1.01.2 2.02.29 3.03.16 1.84.38 3.66.71 5.46.26 1.22.49 2.41.46 3.67-.01.29-.029.583-.048.876-.023.352-.047.704-.052 1.054.08.16.14.34.16.54.12.92-.55 1.91-1.52 2-.07 0-.13.01-.19.01-.66-.01-1.34-.31-1.67-.94-.24-.45-.32-.91-.31-1.41.004-.41.027-.815.049-1.22.032-.583.065-1.165.041-1.75-.05-.48-.13-.94-.22-1.42-.37-1.78-.65-3.56-.82-5.38q-.06-.672-.12-1.346c-.089-1.02-.178-2.042-.295-3.06l-.418.487-.014.016c-1.04 1.213-2.079 2.426-3.103 3.653-1.682 2.009-3.423 3.96-5.155 5.899l-.055.061-.003.003-.007.007-.008.01q-.004.01-.012.01l-.01.01-.03.03c-2.47 2.86-4.88 5.79-7.27 8.71a1043 1043 0 0 1-5.5 6.647l-.036.043-1.804 2.17c-2.43 2.93-4.88 5.84-7.39 8.7-2.56 2.92-5.1 5.87-7.55 8.88q-.426.525-.847 1.055-.549.69-1.094 1.382c-1.381 1.75-2.761 3.498-4.249 5.163-.847.952-1.712 1.888-2.576 2.823l-.864.937-.017.019c-.564.613-1.129 1.227-1.693 1.851l-.109.117-.082.088c-.196.209-.39.416-.579.635-.37.39-.8.79-1.36.84a.7.7 0 0 1-.146.01H2.44c-.9.02-1.7-.59-1.83-1.5"/>
+              <path fill="#90a1b9" d="M.61 65.11c-.08-.64.21-1.29.71-1.68.43-.414.83-.869 1.23-1.32q.195-.222.39-.44l.604-.658A229 229 0 0 1 4.7 59.76c1.07-1.15 2.13-2.32 3.17-3.49 1.244-1.477 2.444-2.985 3.644-4.494a215 215 0 0 1 3.536-4.366c2.275-2.724 4.617-5.406 6.949-8.077l.631-.723c2.036-2.33 4.012-4.722 5.988-7.113L29.94 29.9q3.69-4.44 7.35-8.91c1.36-1.66 2.74-3.32 4.13-4.96 1.067-1.26 2.164-2.49 3.263-3.723l.832-.935.034-.04.1-.11c.968-1.102 1.91-2.22 2.855-3.34q.61-.728 1.226-1.452c.57-.669 1.14-1.328 1.711-1.987l.029-.033c-.84.11-1.68.23-2.51.36q-.394.063-.787.129a54 54 0 0 1-2.043.311 88 88 0 0 0-3.25.47c-.83.18-1.65.36-2.48.55q-.255.059-.51.12c-.454.11-.912.222-1.37.28-.96.12-1.86-.55-1.99-1.51-.13-.95.55-1.88 1.51-2 .09-.01.18-.03.28-.04.578-.122 1.152-.253 1.726-.383C41.16 2.444 42.272 2.19 43.4 2c.488-.086.979-.146 1.472-.206h.002c.365-.044.73-.089 1.096-.144.814-.122 1.62-.253 2.432-.384l.348-.056c1.013-.158 2.028-.298 3.043-.438.85-.117 1.7-.234 2.547-.362.75-.11 1.57-.18 2.21.32.57.44.76 1.126.663 1.8q.105.15.177.33c.28.7.37 1.42.46 2.16.05.41.11.81.15 1.22.1 1.01.2 2.02.29 3.03.16 1.84.38 3.66.71 5.46.26 1.22.49 2.41.46 3.67-.01.29-.029.583-.048.876-.023.352-.047.704-.052 1.054.08.16.14.34.16.54.12.92-.55 1.91-1.52 2-.07 0-.13.01-.19.01-.66-.01-1.34-.31-1.67-.94-.24-.45-.32-.91-.31-1.41.004-.41.027-.815.049-1.22.032-.583.065-1.165.041-1.75-.05-.48-.13-.94-.22-1.42-.37-1.78-.65-3.56-.82-5.38q-.06-.672-.12-1.346c-.089-1.02-.178-2.042-.295-3.06l-.418.487-.014.016c-1.04 1.213-2.079 2.426-3.103 3.653-1.682 2.009-3.423 3.96-5.155 5.899l-.055.061-.003.003-.007.007-.008.01q-.004.01-.012.01l-.01.01-.03.03c-2.47 2.86-4.88 5.79-7.27 8.71a1043 1043 0 0 1-5.5 6.647l-.036.043-1.804 2.17c-2.43 2.93-4.88 5.84-7.39 8.7-2.56 2.92-5.1 5.87-7.55 8.88q-.426.525-.847 1.055-.549.69-1.094 1.382c-1.381 1.75-2.761 3.498-4.249 5.163-.847.952-1.712 1.888-2.576 2.823l-.864.937-.017.019c-.564.613-1.129 1.227-1.693 1.851l-.109.117-.082.088c-.196.209-.39.416-.579.635-.37.39-.8.79-1.36.84a.7.7 0 0 1-.146.01H2.44c-.9.02-1.7-.59-1.83-1.5"/>
               <path fill="#000" d="M45.64 16.56c.02-.02.03-.03.04-.05-.01.01-.02.03-.04.05M45.7 16.5s.01-.01.01-.02q-.01.01-.01.02"/>
             </svg>
           </div>
         </div>
       </div>
-
-      <div className="absolute h-60 w-full bg-gradient-to-t from-background to-muted/40 bottom-0 z-10"></div>
     </div>
   )
 }

@@ -78,6 +78,57 @@
   .font-story-script {
     font-family: 'Story Script', cursive;
   }
+
+  /* 
+   * GSAP Animation Utility Classes - Initial States
+   * Using visibility: hidden prevents any flash while GSAP initializes
+   * GSAP will set visibility: visible when animation starts
+   */
+  .animate-fade-in,
+  .animate-fade-in-up,
+  .animate-fade-in-down,
+  .animate-fade-in-left,
+  .animate-fade-in-right,
+  .animate-slide-up,
+  .animate-slide-down,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-scale-in,
+  .animate-scale-up,
+  .animate-rotate-in,
+  .animate-blur-in,
+  .animate-zoom-in,
+  .animate-zoom-out,
+  .animate-flip-x,
+  .animate-flip-y,
+  .animate-bounce-in,
+  .animate-elastic-in,
+  .animate-back-in,
+  .animate-smooth-fade,
+  .animate-smooth-slide,
+  .animate-smooth-scale,
+  .animate-smooth-rotate,
+  .animate-smooth-blur {
+    visibility: hidden;
+  }
+
+  /* Stagger children - also hidden by default */
+  [data-stagger-child] {
+    visibility: hidden;
+  }
+
+  /* Duration utilities */
+  .duration-fast { --gsap-duration: 0.4; }
+  .duration-normal { --gsap-duration: 0.8; }
+  .duration-slow { --gsap-duration: 1.2; }
+  .duration-slower { --gsap-duration: 1.6; }
+
+  /* Delay utilities */
+  .delay-none { --gsap-delay: 0; }
+  .delay-fast { --gsap-delay: 0.1; }
+  .delay-normal { --gsap-delay: 0.2; }
+  .delay-slow { --gsap-delay: 0.4; }
+  .delay-slower { --gsap-delay: 0.6; }
 }
 
 @keyframes alto-fade-in {

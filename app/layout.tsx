@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
+import { AnimationProvider } from "@/components/animation-provider"
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://altotranslate.xyz'
 
@@ -87,7 +88,11 @@ const RootLayout = ({
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icon.svg" />
       </head>
-      <body className="font-inter">{children}</body>
+      <body className="font-inter bg-slate-100">
+        <AnimationProvider enableScrollSmoother={false}>
+          {children}
+        </AnimationProvider>
+      </body>
     </html>
   )
 }

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1214)"><rect width="1000" height="1000" fill="#0e69fe"></rect><g transform="matrix(1.953125,0,0,1.953125,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"><svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="512" height="512" fill="#0E69FE"></rect>
+<path d="M248 120H296L344 264H392" stroke="white" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M336 120H392" stroke="white" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1214"><rect width="1000" height="1000" x="0" y="0" rx="250" ry="250"></rect></clipPath></defs></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1215)"><rect width="1000" height="1000" fill="#0e69fe"></rect><g transform="matrix(1.953125,0,0,1.953125,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"><svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="512" height="512" fill="#0E69FE"></rect>
+<path d="M248 120H296L344 264H392" stroke="white" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M336 120H392" stroke="white" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1215"><rect width="1000" height="1000" x="0" y="0" rx="250" ry="250"></rect></clipPath></defs></svg></g></svg>
